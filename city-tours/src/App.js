@@ -1,7 +1,9 @@
 import React from 'react';
-import './App.scss';
 import Navbar from "./components/Navbar/Navbar";
-import TourList from "./components/TourList/Tourlist"
+import TourList from "./components/TourList/Tourlist";
+
+// styling
+import './App.scss';
 
 function App() {
   return (
