@@ -7,7 +7,11 @@ export default class Tour extends Component {
   state = {
     showInfo: false
   }
-
+  handleInfo = () => {
+    this.setState({
+      showInfo: !this.state.showInfo
+    });
+  }
   render() {
     // console.log(this.props);
     const {id, city, img, name, info} = this.props.tour;
@@ -16,8 +20,8 @@ export default class Tour extends Component {
     return (
       <article className="tour">
         <div className="img-container">
-          <img src={img} alt="of the tour"/>
-          <span className="close-btn">
+          <img src={img} alt="tour of the city"/>
+          <span className="close-btn" onClick={() => removeTour(id)}>
             <i className="fas fa-window-close"></i>
           </span>
         </div>
@@ -25,7 +29,7 @@ export default class Tour extends Component {
         <div className="tour-info">
           <h3>{city}</h3>
           <h4>{name}</h4>
-          <h5>info {" "}<span><i className="fas fa-caret-square-down"></i></span></h5>
+          <h5>info {" "}<span onClick={this.handleInfo}><i className="fas fa-caret-square-down"></i></span></h5>
           {this.state.showInfo && <p>{info}</p>}
         </div>
       </article>
