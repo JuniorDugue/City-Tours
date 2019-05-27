@@ -9,6 +9,10 @@ $mainGreen: #82b340;
 $mainWhite: #fff;
 $mainGrey: #ececec;
 
+$mainBorder: 1px solid red;
+
+$mainTransition: all 0.3s linear;
+
 body{
   font-family: 'Open Sans', sans-serif;
   background: $mainWhite;
